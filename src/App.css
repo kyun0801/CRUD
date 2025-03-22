@@ -1,0 +1,147 @@
+/* body 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* 정중앙 정렬을 위한 래퍼 */
+.app-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* 전체 컨테이너 */
+.app-container {
+    width: 300px;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 라이트 모드 */
+.app-container.light {
+    background: #fff;
+    color: #333;
+}
+
+/* 다크 모드 */
+.app-container.dark {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* 헤더 영역 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 다크모드 토글 버튼 */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* 탭 메뉴 */
+.tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tabs span {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.active-tab {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Todo 리스트 */
+.todo-list {
+    margin-top: 16px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* 각 Todo 아이템 */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+/* 왼쪽 (체크박스 + 텍스트) */
+.todo-left {
+    display: flex;
+    align-items: center;
+}
+
+/* 체크박스 */
+.todo-left input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* 완료된 텍스트 스타일 */
+.completed-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 다크 모드에서 삭제 버튼 색상도 흰색으로 변경 */
+.app-container.dark .delete-btn {
+    color: #fff;
+}
+
+/* 추가 영역 */
+.add-todo {
+    display: flex;
+    margin-top: 16px;
+}
+
+.add-todo input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.add-todo button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.add-todo button:hover {
+    background: #e55a00;
+}
+
